@@ -1,0 +1,232 @@
+#1 Find maximum between two numbers
+'''
+a,b=map(eval,input().split(','))
+if a>=b:
+    print(a)
+else:
+    print(b)
+#'''
+
+#2 Find maximum between three numbers
+'''
+a,b,c=map(eval,input().split(','))
+if a>b and a>c:
+    print(a)
+elif b>a and b>c:
+    print(b)
+else:
+    print(c)
+#'''
+
+#3 Check given number is +ve or -ve
+'''
+a=eval(input())
+if a>0:
+    print('Positive')
+elif a<0:
+    print('Negitive')
+else:
+    print('Zero')
+#'''
+
+#4 check wheather a number is divisible by 5 and 11 or not
+'''
+a=int(input())
+if a%5==0 and a%11==0:
+    print(f'{a} is divisible by 5 and 11')
+else:
+    print(f'{a} is divisible not by 5 and 11')
+#'''
+
+#5 check given number is even or odd
+'''
+a=int(input())
+if a%2==0:
+    print('Even')
+else:
+    print('Odd')
+#'''
+
+#6 check wheather a year is leap year or not
+'''
+y=int(input())
+if y%400==0 or (y%4==0 and y%100!=0):
+    print("Leap Year")
+else:
+    print('Not a Leap Year')
+#'''
+
+#7 Check wheather a character is alphabet or not
+'''
+ch=input()
+if ch.isalpha():
+    print('Alphabet')
+else:
+    print('Not Alphabet')
+#'''
+
+#8 check wheather is given alphabet is vowel or consonant
+'''
+ch=input()
+if ch in 'aeiouAEIOU':
+    print('Vowel')
+else:
+    print('Consonent')
+#'''
+
+#9 check wheather given character is alphabet or digit or special character
+'''
+ch=input()
+if ch.isalpha():
+    print('Alphabet')
+elif ch.isdigit():
+    print('Digit')
+else:
+    print('Special Character')
+#'''
+
+#10 check wheather a character is uppercase or lower case
+'''
+ch=input()
+if ch.isupper():
+    print("UpperCase")
+else:
+    print("LowerCase")
+#'''
+
+#11 week numbers and print week days
+'''
+n=int(input())
+week=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+if n>0 and n<8:
+    print(week[n-1])
+else:
+    print('Invalid')
+#'''
+
+#12 month number and print number of days in that month
+'''
+n=int(input())
+mon=[31,28,31,30,31,30,31,31,30,31,30,31]
+if n>0 and n<13:
+    print(mon[n-1])
+else:
+    print('Invalid')
+#'''
+
+#13 count total number of notes in given amount
+'''
+n=int(input())
+notes=[2000,500,200,100,50,20,10]
+for note in notes:
+    c=0
+    if n>=note:
+        c=n//note
+        n%=note
+    print(f'{note} : {c}')
+#'''
+
+#14 check whether triangle is valid or not using angles
+'''
+a,b,c=map(eval,input().split(','))
+if a+b+c==180 and a>0 and b>0 and c>0:
+    print('Valid')
+else:
+    print('Not Valid')
+#'''
+
+#15 check whether triangle is valid or not using sides
+'''
+a,b,c=map(eval,input().split(','))
+if a+b>c and a+c>b and b+c>c:
+    print('Valid')
+else:
+    print('Not Valid')
+#'''
+
+#16 check whether the triangle is equilateral, isosceles or scalene triangle
+'''
+a,b,c=map(eval,input().split(','))
+if a==b==c:
+    print('Equilateral')
+elif a==b or a==c or b==c:
+    print("Isosceles")
+else:
+    print("Scalene")
+#'''
+
+#17 find all roots of a quadratic equation
+'''
+a,b,c=map(int,input().split(","))
+d=((b**2)-(4*a*c))**0.5
+if d>0:
+    r1=((-b-d)/(2*a))
+    r2=((-b+d)/(2*a))
+elif d==0:
+    r1=r2=-b/(2*a)
+else:
+    real=-b/(2*a)
+    imag=(abs(d)**0.5)/(2*a)
+    r1=f"{real}+{imag}i"
+    r2=f"{real}-{imag}i"
+print(f'Root 1= {r1}, Root 2= {r2}')
+#'''
+
+#18 program to calculate profit or loss
+'''
+s,c=map(eval,input().split(","))
+if s>c:
+    print("Profit")
+elif s<c:
+    print("Loss")
+else:
+    print("None")
+#'''
+
+#19 five subjects Calculate percentage and grade according
+'''
+a,b,c,d,e=map(int,input().split(","))
+p=((a+b+c+d+e)/500)*100
+if p>=90:
+    print('Grade A')
+elif p<90 and p>=80:
+    print('Grade B')
+elif p<80 and p>=70:
+    print('Grade C')
+elif p<70 and p>=60:
+    print('Grade D')
+elif p<60 and p>=40:
+    print('Grade E')
+else:
+    print('Grade F')
+#'''
+
+#20 Basic salary of an employee and calculate its Gross salary according
+'''
+b=int(input())
+if b<=10000:
+	hra=b*0.2
+	da=b*0.8
+elif b<=20000:
+	hra=b*0.25
+	da=b*0.9
+else:
+	hra=b*0.3
+	da=b*0.95
+print(f'Gross Salary:{b+hra+da}')
+#'''
+
+#21 calculate the total electricity bill
+'''
+u,a=eval(input()),0
+if u<=50:
+    a=u*0.5
+elif u<=150:
+    a=25+((u-50)*0.75)
+elif u<250:
+    a=25+75+((u-150)*1.2)
+else:
+    a=25+75+120+((u-250)*1.5)
+a+=(a*0.2)
+print(f'Amount= {a}')
+#'''
